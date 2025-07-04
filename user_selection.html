@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Selection - PolluTrack</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-blue-100 min-h-screen flex flex-col items-center justify-center p-6">
+
+  <h1 class="text-4xl font-extrabold text-blue-700 mb-10 drop-shadow-sm">Select Your User Type</h1>
+
+  <div class="space-y-8 w-full max-w-lg">
+
+    <!-- Private Sector -->
+    <div class="p-6 bg-white rounded-xl shadow-lg group transform transition hover:-translate-y-1 hover:shadow-2xl">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-semibold text-gray-800">Private Sector</h2>
+        <button onclick="toggleOptions('privateOptions', 'govOptions')" class="bg-blue-600 text-white px-4 py-2 rounded-lg shadow transition hover:bg-blue-700 focus:ring-2 focus:ring-offset-2 focus:ring-blue-400">
+          Select
+        </button>
+      </div>
+      <div id="privateOptions" class="mt-2 space-x-4 hidden">
+        <button onclick="location.href='/login'" class="bg-blue-600 text-white px-4 py-2 rounded-lg shadow transition hover:bg-blue-700 focus:ring-2 focus:ring-offset-2 focus:ring-blue-400">Login</button>
+        <button onclick="location.href='/register'" class="bg-blue-600 text-white px-4 py-2 rounded-lg shadow transition hover:bg-blue-700 focus:ring-2 focus:ring-offset-2 focus:ring-blue-400">Register</button>
+      </div>
+    </div>
+
+    <!-- Government User -->
+    <div class="p-6 bg-white rounded-xl shadow-lg group transform transition hover:-translate-y-1 hover:shadow-2xl">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-semibold text-gray-800">Government User</h2>
+        <button onclick="toggleOptions('govOptions', 'privateOptions')" class="bg-blue-600 text-white px-4 py-2 rounded-lg shadow transition hover:bg-blue-700 focus:ring-2 focus:ring-offset-2 focus:ring-blue-400">
+          Select
+        </button>
+      </div>
+      <div id="govOptions" class="mt-2 space-x-4 hidden">
+        <button onclick="location.href='/login'" class="bg-blue-600 text-white px-4 py-2 rounded-lg shadow transition hover:bg-blue-700 focus:ring-2 focus:ring-offset-2 focus:ring-blue-400">Login</button>
+        <button onclick="location.href='/register'" class="bg-blue-600 text-white px-4 py-2 rounded-lg shadow transition hover:bg-blue-700 focus:ring-2 focus:ring-offset-2 focus:ring-blue-400">Register</button>
+      </div>
+    </div>
+
+    <!-- Normal Citizen -->
+    <div class="p-6 bg-white rounded-xl shadow-lg group transform transition hover:-translate-y-1 hover:shadow-2xl text-center">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Normal Citizen</h2>
+      <a href="{{ url_for('sensor_map') }}" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg shadow transition hover:bg-blue-700 focus:ring-2 focus:ring-offset-2 focus:ring-blue-400">
+        Continue to Sensor Map
+      </a>
+    </div>
+
+  </div>
+
+  <script>
+    function toggleOptions(showId, hideId) {
+      const showEl = document.getElementById(showId);
+      const hideEl = document.getElementById(hideId);
+      if (showEl.classList.contains('hidden')) {
+        showEl.classList.remove('hidden');
+        hideEl.classList.add('hidden');
+      } else {
+        showEl.classList.add('hidden');
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PolluTrack</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col items-center justify-center">
+      <h1 class="text-5xl font-extrabold tracking-tight mb-4">
+        <span class="bg-gradient-to-r from-blue-600 to-teal-400 text-transparent bg-clip-text drop-shadow-lg">PolluTrack</span>
+      </h1>
+      <button onclick="location.href='/user-selection'" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg shadow transition transform hover:-translate-y-1 hover:shadow-xl">
+        View Pollutant Data
+      </button>
+    </div>
+  </header>
+
+  <!-- Pollution Awareness Section -->
+  <section class="max-w-5xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold mb-4">Why Should We Track Pollution?</h2>
+    <p class="mb-6 text-lg leading-relaxed">
+      Pollution, especially air pollution, poses serious threats to human health and the environment.
+      Fine particles and harmful gases are known to cause respiratory diseases, cardiovascular issues,
+      and premature death. Monitoring these pollutants helps in making informed policy decisions,
+      protecting public health, and identifying pollution sources. Understanding trends in air quality
+      empowers communities, governments, and industries to act responsibly and proactively.
+    </p>
+  </section>
+
+  <!-- Pollutants Section -->
+  <section class="bg-white py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-2xl font-bold mb-8 text-center">Key Pollutants We Monitor</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Carbon Monoxide -->
+        <div class="bg-gray-50 rounded-xl shadow p-6 group transform transition hover:-translate-y-1 hover:shadow-xl">
+          <img src="https://raw.githubusercontent.com/vidyl911/soft-geo-project/main/CO.jpeg" alt="CO Molecule" class="w-full h-40 object-contain mb-4" />
+          <h3 class="text-xl font-semibold mb-2">Carbon Monoxide (CO)</h3>
+          <p>
+            A colorless, odorless gas from incomplete combustion of fossil fuels. It interferes with oxygen transport in the blood, causing fatigue, headaches, and even death at high concentrations.
+          </p>
+        </div>
+
+        <!-- Nitrogen Dioxide -->
+        <div class="bg-gray-50 rounded-xl shadow p-6 group transform transition hover:-translate-y-1 hover:shadow-xl">
+          <img src="https://raw.githubusercontent.com/vidyl911/soft-geo-project/main/NO2.jpg" alt="NO2 Molecule" class="w-full h-40 object-contain mb-4" />
+          <h3 class="text-xl font-semibold mb-2">Nitrogen Dioxide (NO<sub>2</sub>)</h3>
+          <p>
+            A reddish-brown gas from fossil fuel combustion, especially in vehicles. It irritates lungs, reduces immunity, and contributes to ground-level ozone and smog formation.
+          </p>
+        </div>
+
+        <!-- Nitrogen Oxides -->
+        <div class="bg-gray-50 rounded-xl shadow p-6 group transform transition hover:-translate-y-1 hover:shadow-xl">
+          <img src="https://raw.githubusercontent.com/vidyl911/soft-geo-project/main/NOx.jpeg" alt="NOx Molecule" class="w-full h-40 object-contain mb-4" />
+          <h3 class="text-xl font-semibold mb-2">Nitrogen Oxides (NOx)</h3>
+          <p>
+            A group of gases including NO and NO<sub>2</sub> produced by vehicles, power plants, and industry. NOx gases contribute to acid rain, ground-level ozone, and respiratory issues.
+          </p>
+        </div>
+
+        <!-- Ozone -->
+        <div class="bg-gray-50 rounded-xl shadow p-6 group transform transition hover:-translate-y-1 hover:shadow-xl">
+          <img src="https://raw.githubusercontent.com/vidyl911/soft-geo-project/main/O3.jpg" alt="O3 Molecule" class="w-full h-40 object-contain mb-4" />
+          <h3 class="text-xl font-semibold mb-2">Ozone (O<sub>3</sub>)</h3>
+          <p>
+            A reactive gas formed when sunlight reacts with NOx and VOCs. Ground-level ozone causes breathing problems, aggravates asthma, and damages crops and vegetation.
+          </p>
+        </div>
+
+        <!-- PM2.5 -->
+        <div class="bg-gray-50 rounded-xl shadow p-6 group transform transition hover:-translate-y-1 hover:shadow-xl">
+          <img src="https://raw.githubusercontent.com/vidyl911/soft-geo-project/main/PM2.5.jpg" alt="PM2.5 particles" class="w-full h-40 object-contain mb-4" />
+          <h3 class="text-xl font-semibold mb-2">Particulate Matter 2.5 (PM<sub>2.5</sub>)</h3>
+          <p>
+            Fine particles smaller than 2.5 micrometers. They can lodge deep in the lungs and enter the bloodstream, increasing the risk of heart and lung diseases.
+          </p>
+        </div>
+
+        <!-- PM10 -->
+        <div class="bg-gray-50 rounded-xl shadow p-6 group transform transition hover:-translate-y-1 hover:shadow-xl">
+          <img src="https://raw.githubusercontent.com/vidyl911/soft-geo-project/main/PM10.png" alt="PM10 particles" class="w-full h-40 object-contain mb-4" />
+          <h3 class="text-xl font-semibold mb-2">Particulate Matter 10 (PM<sub>10</sub>)</h3>
+          <p>
+            Inhalable particles with a diameter of 10 micrometers or smaller. Commonly arise from dust, construction, and industry, and can worsen respiratory conditions.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+
+
+
